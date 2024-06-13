@@ -13,11 +13,13 @@ body {
     align-items: center;
 }
 
+.c-page-head .logo {
+    width: 280px;
+}
+
 .wrapper {
-    padding-left: 32px;
     margin-left: auto;
     margin-right: auto;
-    padding-right: 32px;
     width: 100%;
     max-width: 1300px;
 }
@@ -54,7 +56,6 @@ body {
 
 
 /* Main section styles */
-
 main {
     background-color: #f5f7fd;
     text-align: center;
@@ -99,7 +100,6 @@ form .form-item .c-textbox {
     width: 90%;
     display: block;
     margin: auto;
-    text-transform: uppercase;
 }
 
 form .form-item .c-btn {
@@ -128,9 +128,51 @@ form .form-item .c-btn {
 #map {
     width: 600px;
     height: 300px;
- 
+    display: none; /* The map will be hidden until results are displayed */
 }
 
+/* Footer styles */
 footer {
     text-align: center;
+}
+
+footer p {
+    font-size: 15px;
+    color: grey;
+    padding-top: 4px;
+}
+
+footer p a {
+    font-size: 15px;
+    color: grey;
+    text-decoration: underline;
+}
+
+/* Media Queries - for mobile responsive sizes max 440px wide */
+@media (max-width: 440px) {
+    .c-navbar {
+        display: none;
+    }
+    .c-page-head .logo {
+        width: 200px;
+    }
+    main h1 {
+        font-size: 42px;
+    }
+    form {
+        width: 70%;
+    }
+    .postcode-results {
+        flex-direction: column;
+    }
+    #results {
+        display: block;
+        margin: auto;
+        padding-bottom: 24px;
+    }
+    #map {
+        width: 600px;
+        height: 300px;
+        display: none; /* The map will be hidden until results are displayed */
+    }
 }

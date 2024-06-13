@@ -32,7 +32,7 @@
 
     <!-- Header area with logo and nav -->
     <header class="c-page-head wrapper">
-        <a href="/"><img src="img/plotbox-logo.png" alt="Plotbox" width="300"></a>
+        <a href="/"><img src="img/plotbox-logo.png" alt="Plotbox" class="logo"></a>
         <nav class="c-navbar">    
             <ul>                                                          
                 <li><a href="https://plotbox.com/" target="_blank">Plotbox.com</a></li>
@@ -45,15 +45,17 @@
     <!-- Main section -->
     <main>
         <div class="wrapper">
-           
+
+            <!-- Title and sub paragraph -->
             <div class="o-grid__item u-width-full u-a-center">
                 <h1>Postcode Lookup</h1>
-                <p class="u-bold u-p-t2 u-text-18">Please enter a UK postcode below to retrieve geographical information </p>
+                <p class="u-bold u-p-t2 u-text-18">Please enter a UK postcode below to its retrieve geographical information </p>
             </div>
 
+            <!-- Postcode lookup form -->
             <form id="postcodeLookup">
                 <div class="form-item">
-                        <input type="text" id="postcode" name="postcode" maxlength="7" required class="c-textbox" placeholder="Enter Postcode eg BT10 5CB">
+                        <input type="text" id="postcode" name="postcode" maxlength="7" required class="c-textbox" placeholder="Enter postcode eg BT43 7QA">
                     </div>
                     <div class="form-item">
                         <input type="submit" class="c-btn" value="Submit"/>
@@ -61,11 +63,10 @@
                 </div>
             </form>
 
+            <!-- Postcode results including map -->
             <div class="postcode-results">
-
                 <div id="results"></div>
                 <div id="map"></div>
-
             </div>
 
         </div>
@@ -73,7 +74,10 @@
     <!-- / END Main section -->
 
     <footer class="wrapper">
-        <p>&copy; Copyright 2024 Jonny McCrink.</p>
+        <p>&copy; Copyright 
+            <script>document.write(`${new Date().getFullYear()}`);</script> 
+            <a href="https://www.linkedin.com/in/jmccrink/" target="_blank">Jonny McCrink</a>.
+        </p>
     </footer>
 
 </body>

@@ -3,11 +3,6 @@ let marker;
 
 $(document).ready(function() {
 
-    // Initialize the map - https://leafletjs.com/
-    map = L.map('map').setView([54.86691398684093, -6.258241527628078], 12);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    marker = L.marker([54.86691398684093, -6.258241527628078]).addTo(map);
-
     $('#postcodeLookup').submit(function(event) {
         event.preventDefault();
         const postcode = $('#postcode').val();
@@ -18,13 +13,14 @@ $(document).ready(function() {
             return;
         }
 
+        // API Callback for Postcodes.IO
         $.ajax({
             url: `https://api.postcodes.io/postcodes/${postcode}`, //endpoint callback for the Postcodes.IO API
             method: 'GET',
             success: function(data) {
                 if (data.status === 200) {
                     displayResults(data.result);
-                    updateMap(data.result.latitude, data.result.longitude);
+                    showMap(data.result.latitude, data.result.longitude);
                 } else {
                     displayError(data.error);
                 }
@@ -46,7 +42,6 @@ $(document).ready(function() {
             <p><strong>Latitude:</strong> ${result.latitude}</p>
             <p><strong>Longitude:</strong> ${result.longitude}</p>
         `);
-        $('#map').show(); // Show the map div after a sucess for postcode results
     }
 
     // An error message if the returning an invalid postcode
@@ -55,11 +50,18 @@ $(document).ready(function() {
         resultsDiv.html(`<p style="color: red;">${message}</p>`);
     }
 
-    // Update location for the map from results above
-    function updateMap(lat, lng) {
-        const location = [lat, lng];
-        map.setView(location, 13);
-        marker.setLatLng(location);
+    function showMap(lat, lng) {
+        $('#map').show();
+        // Initialize the map only if it hasn't been initialized yet
+        if (!map) {
+            map = L.map('map').setView([lat, lng], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            marker = L.marker([lat, lng]).addTo(map);
+        } else {
+            map.setView([lat, lng], 13);
+            marker.setLatLng([lat, lng]);
+        }
     }
-
 });
