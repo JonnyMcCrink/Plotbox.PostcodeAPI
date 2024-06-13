@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header styles */
+.c-page-head {
+    width: 100%;
+    z-index: 999999999;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper {
+    padding-left: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 32px;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.c-navbar {
+    align-items: flex-end;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.c-navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    font-size: 16px;
+}
+
+.c-navbar ul li a {
+    display: block;
+    line-height: 32px;
+    padding: 12px;
+    position: relative;
+    font-weight: 700;
+    color: #003e78;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.c-navbar ul li a:hover {
+    color: #00abcd;
+}
+
+
+/* Main section styles */
+
+main {
+    background-color: #f5f7fd;
+    text-align: center;
+    padding: 40px 0;
+}
+
+main h1 {
+    color: #003e78;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+
+main p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #003e78;
+    padding-top: 16px;
+    margin: 0;
+}
+
+form {
+    width: 30%;
+    display: block;
+    margin: auto;
+    padding-top: 32px;
+}
+
+form .form-item {
+    display: block;
+    margin-top: 24px;
+}
+
+form .form-item .c-textbox {
+    font-size: 1rem;
+    background: #fff;
+    border: 1px solid #97999b;
+    border-radius: 3px;
+    color: #003e78;
+    outline: 0;
+    padding: 16px;
+    width: 90%;
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+form .form-item .c-btn {
+    background-color: #003e78;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    height: auto;
+    padding: 15px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 75%;
+}
+
+.postcode-results {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#map {
+    width: 600px;
+    height: 300px;
+ 
+}
+
+footer {
+    text-align: center;
+}

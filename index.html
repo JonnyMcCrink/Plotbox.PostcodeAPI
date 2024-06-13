@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+
+    <!-- Standard Meta -->
+    <title>Plotbox Postcode Lookup</title>
+    <meta name="author" content="Jonny McCrink (jonnymccrink@gmail.com)">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery Script -->
+    <script src="js/postcode-lookup.js"></script>
+
+    <!-- LeafletJS Map CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header area with logo and nav -->
+    <header class="c-page-head wrapper">
+        <a href="/"><img src="img/plotbox-logo.png" alt="Plotbox" width="300"></a>
+        <nav class="c-navbar">    
+            <ul>                                                          
+                <li><a href="https://plotbox.com/" target="_blank">Plotbox.com</a></li>
+            </ul>
+        </nav>                                           
+    </header> 
+    <!-- / END Header area  -->
+
+    
+    <!-- Main section -->
+    <main>
+        <div class="wrapper">
+           
+            <div class="o-grid__item u-width-full u-a-center">
+                <h1>Postcode Lookup</h1>
+                <p class="u-bold u-p-t2 u-text-18">Please enter a UK postcode below to retrieve geographical information </p>
+            </div>
+
+            <form id="postcodeLookup">
+                <div class="form-item">
+                        <input type="text" id="postcode" name="postcode" maxlength="7" required class="c-textbox" placeholder="Enter Postcode eg BT10 5CB">
+                    </div>
+                    <div class="form-item">
+                        <input type="submit" class="c-btn" value="Submit"/>
+                    </div>
+                </div>
+            </form>
+
+            <div class="postcode-results">
+
+                <div id="results"></div>
+                <div id="map"></div>
+
+            </div>
+
+        </div>
+    </main>
+    <!-- / END Main section -->
+
+    <footer class="wrapper">
+        <p>&copy; Copyright 2024 Jonny McCrink.</p>
+    </footer>
+
+</body>
+</html>
