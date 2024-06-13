@@ -12,7 +12,7 @@ An as added extra, I have displayed an interactive map on the page, which in itâ
 
 For the map, I am using [LeafletJS](https://leafletjs.com/), an open source JS library for interactive maps and used the documentation for this to help me display this type of map on the page.
 
-I spent approximately 2hrs on this task from start to finish. I really enjoyed this task and thank you for the opportunity to showcase my skillset in this way. I look forward to hopefully chatting to you soon.
+I spent approximately 3hrs on this task from start to finish. I really enjoyed this task and thank you for the opportunity to showcase my skillset in this way. I look forward to hopefully chatting to you soon.
 
 Jonny - jonnymccrink@gmail.com
 
